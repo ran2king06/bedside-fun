@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-開啟終端顯示的本機網址。主要頁面在 `app/pages/index.vue`，樣式在 `app/assets/css/main.css`，插畫在 `public/bedside-town.png`。
+開啟終端顯示的本機網址。主要頁面在 `app/pages/index.vue`，樣式在 `app/assets/css/main.css`，插畫在 `public/bedside-town.webp`。
 
 ## 產生靜態網站
 
@@ -20,5 +20,7 @@ npm run generate
 ```
 
 產物位於 `.output/public`，可部署到 Vercel 等支援靜態網站的平台。本專案也提供 `npm run generate:site`，會將相同產物複製到 `dist`，供目前的枕邊小物預覽網站使用。
+
+GitHub Actions 會在推送至 `main` 或建立 Pull Request 時執行安裝與靜態產生。若將此 repository 匯入 Vercel，請使用 `npm run generate` 作為建置指令，並將輸出目錄設為 `.output/public`；連接後，Vercel 可依 Git 分支自動部署。
 
 目前頁面沒有真正可購買的商品。接入代發商前，請先確認貨源、庫存同步與商品資料使用授權，再加上購物與付款流程。
